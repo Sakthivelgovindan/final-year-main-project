@@ -1,0 +1,16 @@
+<div class="container" ng-app="myDemo" ng-controller="busno3">
+    
+    
+    <form name="searchForm" novalidate ng-submit="search()">
+        <div class="input-group">
+            <input name="place" type="number" class="form-control"  ng-model="busnumber.searchBus"  placeholder ="{{busnumber.last_place}}" required />
+            <span class="input-group-btn">
+                <button class="btn btn-primary" ng-disabled="searchForm.$invalid" ng-click="searchBus()">Search</button>
+            </span>
+        </div>
+    </form>
+    
+    <br>
+    <div id="map" class="map_height"></div>
+    
+</div>

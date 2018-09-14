@@ -1,0 +1,66 @@
+<div class="container" ng-controller="aregister">
+	<div class="text-center">
+	        <h1 class="nice">Registration Form</h1>
+	  </div>		
+			<div class="form-group">
+				<label for="">admin Id</label>
+				<input type="text" class="form-control" placeholder="user Id" ng-model="adminInfo.adminId" disabled>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-6 form-group">
+					<label>First Name</label>
+					<input type="text" placeholder="Enter First Name Here.." ng-model="adminInfo.firstname" class="form-control">
+				</div>
+				<div class="col-sm-6 form-group">
+					<label>Last Name</label>
+					<input type="text" placeholder="Enter Last Name Here.." ng-model="adminInfo.lastname" class="form-control">
+				</div>
+			</div>	
+			<div class="form-group">
+				<label for="">Email</label>
+				<input type="text" class="form-control" placeholder="Enter your email" 
+				ng-model="adminInfo.email">
+			</div>
+			<fieldset class="inline-fields">
+   				<label>Designation</label> 
+		        <div class = "row col-sm-12">
+		               <select class="form-control" id="column_select" ng-model="selecteddesignationValue">
+		                	<option value="">select</option>
+		                	<option ng-repeat="x in names" value="{{x.value}}" ng-selected="selecteddesignationValue==x.value" >{{x.value}}</option>    
+		                </select>
+		        </div>
+		    </fieldset>
+		   <br>
+		    <fieldset class="inline-fields">
+   				<label>College</label> 
+		        <div class = "row col-sm-12">
+		                <select class="form-control" id="column_select" ng-model="selectedcollegeValue">
+		                	<option value="">select</option>
+		                	<option ng-repeat="x in college" value="{{x.value}}" ng-selected="selectedcollegeValue==x.value" >{{x.value}}</option>    
+		                </select>
+		        </div>
+		    </fieldset>
+		    <br>
+			
+			<div class="form-group">
+				<label for="">Mobile Number</label>
+				<input type="number" class="form-control" placeholder="Enter mobile number" ng-model="adminInfo.mobile">
+			</div>
+			 <fieldset class="inline-fields">
+   				<label>Status</label> 
+		        <div class = "row col-sm-12">
+		               <select class="form-control" id="column_select" ng-model="selectedstatusValue">
+		                	<option value="">select</option>
+		                	<option ng-repeat="x in status" value="{{x.value}}" ng-selected="selectedstatusValue==x.value" >{{x.value}}</option>    
+		                </select>
+		        </div>
+		    </fieldset>
+		    <br>
+			
+			
+			
+			<button type="submit" class="btn btn-default" ng-click="adminRegister()">Submit</button>
+			<button type="submit" class="btn btn-default" ng-click="adminClear()">Clear</button>
+		<br><br>
+</div>

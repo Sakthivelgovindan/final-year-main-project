@@ -1,0 +1,38 @@
+
+<div class="container" ng-controller="busdetails">
+    <br>
+    <div class="row busdetails">
+       <div class="col-lg-4 col-md-4 col-md-4" style="font-size: 30px">Bus Details</div>
+        <div class="col-lg-4 col-lg-offset-8 col-md-4 col-md-offset-8 input-group" >
+            <input type="text" class="form-control"  ng-model="search_value" placeholder="Search bus...">
+            <span class="input-group-btn">
+                <button class="btn btn-search" type="button" ng-click="search_details()"><i class="fa fa-search fa-fw"></i> Search</button>
+            </span>
+        </div>
+    </div>
+    <br><br>
+  <div class="row busdetails1" >
+        <div class="col-lg-3 col-lg-offset-1 grid1" ng-repeat="details in  data track by $index">
+           
+           <div>
+                <div class="driver_url"><img src="{{details.bus_driver_url}}" alt=""></div>
+                <div class="driver_details">
+                    <span class="label label-default">Driver name:</span> &nbsp;&nbsp;{{details.bus_driver_name}}<br>  
+                    <span class="label label-default">Bus ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;{{details.bus_id}} <br>
+                    <span class="label label-default">Bus No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; <span class="label label-default">{{details.bus_number}}</span><br>
+                    <span class="label label-default">Driver No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;{{details.driver_contact_no}}<br>               
+                </div>
+            </div>
+            <div class="bus_details">
+                <span class="label label-default">Source:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;{{details.source}}<br>
+                <span class="label label-default">Destination:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;{{details.destination}}<br>
+                <span class="label label-default">Morning departure:</span>&nbsp;&nbsp;&nbsp;&nbsp;{{details.bus_morning_taken}}<br>
+                <span class="label label-default">Morning arrival:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;{{details.bus_morning_arrival}}<br>
+                <span class="label label-default">Evening departure:</span>&nbsp;&nbsp;&nbsp;&nbsp;{{details.bus_evening_taken}}<br>
+                <span class="label label-default">Evening arrival:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;{{details.bus_evening_arrival}}<br>
+                <span class="label label-default">Total stops:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;{{details.bus_total_stops}}<br>
+            </div>
+        </div>
+        
+    </div>
+</div>

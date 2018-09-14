@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>GPS Tracker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cdn/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="tracker.css">
+    <link rel="stylesheet" href="font-awesome/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="cdn/animate.css">
+  
+
+
+</head>
+<body ng-app="myDemo">
+<nav class="navbar navbar-inverse  navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <li class="active"><a class="navbar-brand" href="#"><span class="name">K S Rangasamy College of Technology</span> </a></li>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+      	<li class="active"><a ui-sref="home"><span class="glyphicon glyphicon-home"></span>&nbsp; Home</a></li>
+        <li><a ui-sref="about"><span class="glyphicon glyphicon-phone-alt"></span> &nbsp;   About Us</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-list-alt"></span>   &nbsp;  Service <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a ui-sref="defaultloc"><span class="glyphicon glyphicon-education"></span> &nbsp;Bus Track</a></li>
+            <li><a ui-sref="busdetails"><span class="glyphicon glyphicon-unchecked"></span>&nbsp; Bus Details</a></li>
+          </ul>
+        </li>
+        <li><a  ui-sref="admin"><span class="glyphicon glyphicon-user"></span>  &nbsp;  Admin</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-in"></span>   &nbsp;  Sign In <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a ui-sref="slogin"><span class="glyphicon glyphicon-education"></span> &nbsp;Student</a></li>
+          <li><a ui-sref="flogin"><span class="glyphicon glyphicon-unchecked"></span>&nbsp; Faculty</a></li>
+        </ul>
+      </li>
+       <li id="signout"><a  ui-sref="signout"><span class="glyphicon glyphicon-log-out"></span> &nbsp; Sign Out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <br><br><br>
+
+
+	<div ui-view>
+		
+	</div>
+</body>
+
+  <script type="text/javascript" src="cdn/jquery.js"></script>
+  <script type="text/javascript" src="cdn/bootstrap.js"></script>
+  <script src="cdn/wow.min.js"></script>
+  <script>
+  new WOW().init();
+  </script>
+  <!--<\script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>-->
+  <script src="cdn/angular.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>-->
+  <script src="cdn/angular-ui.js"></script>
+  <script src="cdn/ngStorage.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+  <script src="cdn/validation.js"></script>
+  <script type="text/javascript" src="tracker.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdmUE--iRmM6CjEZO-o-Gf5XEbOuDt3d8"> </script>
+  <script src="directives/directives.js"></script>
+  <script src="controller/validation.js"></script>
+  <script src="controller/admin.js"></script>
+  <script src="controller/slogin.js"></script>
+  <script src="controller/flogin.js"></script>
+  <script src="controller/shome.js"></script>
+  <script src="controller/fhome.js"></script>
+  <script src="controller/admininsert.js"></script>
+  <script src="controller/sregister.js"></script>
+  <script src="controller/aregister.js"></script>
+  <script src="controller/fregister.js"></script>
+  <script src="controller/adminSentry.js"></script>
+  <script src="controller/adminFentry.js"></script>
+  <script src="controller/adminSedit.js"></script>
+  <script src="controller/defaultloc.js"></script>
+  <script src="controller/adminFedit.js"></script>
+  <script src="controller/home.js"></script>
+  <script src="controller/busno66.js"></script>
+  <script src="controller/busno1.js"></script>
+  <script src="controller/busno2.js"></script>
+  <script src="controller/busno3.js"></script>
+  <script src="controller/busno4.js"></script>
+  <script src="controller/busno5.js"></script>
+  <script src="controller/about.js"></script>
+  <script src="controller/busdetails.js"></script>
+
+</html>

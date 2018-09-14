@@ -1,0 +1,77 @@
+<div class="container" ng-controller="sregister">
+	<div class="text-center">
+	        <h1 class="nice">Registration Form</h1>
+	  </div>		
+			<div class="form-group">
+				<label for="">User Id</label>
+				<input type="text" class="form-control" placeholder="user Id" ng-model="registerInfo.userId" disabled>
+			</div>
+			<div class="form-group">
+				<label for="">Register Number</label>
+				<input type="text" class="form-control" placeholder="Enter register number" ng-model="registerInfo.regno">
+			</div>
+			<div class="row">
+				<div class="col-sm-6 form-group">
+					<label>First Name</label>
+					<input type="text" placeholder="Enter First Name Here.." ng-model="registerInfo.firstname" class="form-control">
+				</div>
+				<div class="col-sm-6 form-group">
+					<label>Last Name</label>
+					<input type="text" placeholder="Enter Last Name Here.." ng-model="registerInfo.lastname"class="form-control">
+				</div>
+			</div>	
+			<div class="form-group">
+				<label for="">Email</label>
+				<input type="text" class="form-control" placeholder="Enter your email" 
+				ng-model="registerInfo.email">
+			</div>
+			<fieldset class="inline-fields">
+   				<label>Degree</label> 
+		        <div class = "row col-sm-12">
+		                <select class="form-control" id="column_select" ng-model="selectedItemValue">
+		                	<option value="">select</option>
+		                	<option ng-repeat="x in names" value="{{x.value}}" ng-selected="selectedItemValue==x.value" >{{x.value}}</option>    
+		                </select>
+		        </div>
+		    </fieldset>
+		    <br>
+		    <fieldset class="inline-fields">
+   				<label>College</label> 
+		        <div class = "row col-sm-12">
+		                <select class="form-control" id="column_select" ng-model="selectedcollegeValue">
+		                	<option value="">select</option>
+		                	<option ng-repeat="x in college" value="{{x.value}}" ng-selected="selectedcollegeValue==x.value" >{{x.value}}</option>    
+		                </select>
+		        </div>
+		    </fieldset>
+		    <br>
+			
+			<div class="form-group">
+				<label for="">Department</label>
+				<input type="text" class="form-control" placeholder="Eg:IT/CSE/ECE/EEE" ng-model="registerInfo.department">
+			</div>
+			<div class="form-group">
+				<label for="">Year of Passing</label>
+				<input type="text" class="form-control" placeholder="Eg:2010" ng-model="registerInfo.yearofpassing">
+			</div>
+			<div class="form-group">
+				<label for="">Mobile Number</label>
+				<input type="text" class="form-control" placeholder="Enter mobile number" ng-model="registerInfo.mobile">
+			</div>
+			 <fieldset class="inline-fields">
+   				<label>Status</label> 
+		        <div class = "row col-sm-12">
+		               <select class="form-control" id="column_select" ng-model="selectedstatusValue">
+		                	<option value="">select</option>
+		                	<option ng-repeat="x in status" value="{{x.value}}" ng-selected="selectedstatusValue==x.value" >{{x.value}}</option>    
+		                </select>
+		        </div>
+		    </fieldset>
+		    <br>
+			
+			
+			
+			<button type="submit" class="btn btn-default" ng-click="studentRegister()">Submit</button>
+			<button type="submit" class="btn btn-default" ng-click="studentClear()">Clear</button>
+		<br><br>
+</div>
